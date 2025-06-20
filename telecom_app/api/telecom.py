@@ -60,3 +60,4 @@ async def predict(customer: Predict):
     prediction = model.predict(scaled)[0]
     probability = model.predict_proba(scaled)[0][1]
     return {'prediction': f'{bool(prediction)}', 'probability': f'{probability * 100:.1f}'}
+    
